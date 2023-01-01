@@ -1,0 +1,35 @@
+{
+	"name": "really-fun-ctions",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"sourceRoot": "libs/really-fun-ctions/src",
+	"projectType": "library",
+	"targets": {
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"outputs": ["{options.outputFile}"],
+			"options": {
+				"lintFilePatterns": ["libs/really-fun-ctions/**/*.ts"]
+			}
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+			"options": {
+				"jestConfig": "libs/really-fun-ctions/jest.config.ts",
+				"passWithNoTests": true
+			}
+		},
+		"build": {
+			"executor": "@nrwl/js:tsc",
+			"outputs": ["{options.outputPath}"],
+			"options": {
+				"outputPath": "dist/libs/really-fun-ctions",
+				"tsConfig": "libs/really-fun-ctions/tsconfig.lib.json",
+				"packageJson": "libs/really-fun-ctions/package.json",
+				"main": "libs/really-fun-ctions/src/index.ts",
+				"assets": ["libs/really-fun-ctions/*.md"]
+			}
+		}
+	},
+	"tags": ["scope:public", "type:util", "target:all"]
+}
