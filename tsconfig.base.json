@@ -15,8 +15,20 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
+			"@anti-toolbox/ngrx-entity-store": [
+				"libs/state-management/ngrx-entity-store/src/index.ts"
+			],
+			"@anti-toolbox/ngrx-simple-store": [
+				"libs/state-management/ngrx-simple-store/src/index.ts"
+			],
 			"@anti-toolbox/realy-fun-ctions": [
 				"libs/really-fun-ctions/src/index.ts"
+			],
+			"@anti-toolbox/state-management/interfaces": [
+				"libs/state-management/interfaces/src/index.ts"
+			],
+			"@anti-toolbox/state-management/internals": [
+				"libs/state-management/internals/src/index.ts"
 			]
 		}
 	},

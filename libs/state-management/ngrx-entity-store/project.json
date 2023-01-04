@@ -1,0 +1,43 @@
+{
+	"name": "state-management-ngrx-entity-store",
+	"$schema": "../../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/state-management/ngrx-entity-store/src",
+	"prefix": "anti-toolbox",
+	"targets": {
+		"build": {
+			"executor": "@nrwl/angular:package",
+			"outputs": ["dist/libs/state-management/ngrx-entity-store"],
+			"options": {
+				"project": "libs/state-management/ngrx-entity-store/ng-package.json"
+			},
+			"configurations": {
+				"production": {
+					"tsConfig": "libs/state-management/ngrx-entity-store/tsconfig.lib.prod.json"
+				},
+				"development": {
+					"tsConfig": "libs/state-management/ngrx-entity-store/tsconfig.lib.json"
+				}
+			},
+			"defaultConfiguration": "production"
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["coverage/libs/state-management/ngrx-entity-store"],
+			"options": {
+				"jestConfig": "libs/state-management/ngrx-entity-store/jest.config.ts",
+				"passWithNoTests": true
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"options": {
+				"lintFilePatterns": [
+					"libs/state-management/ngrx-entity-store/**/*.ts",
+					"libs/state-management/ngrx-entity-store/**/*.html"
+				]
+			}
+		}
+	},
+	"tags": []
+}
