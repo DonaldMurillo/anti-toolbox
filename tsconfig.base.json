@@ -27,8 +27,8 @@
 			"@anti-toolbox/state-management/interfaces": [
 				"libs/state-management/interfaces/src/index.ts"
 			],
-			"@anti-toolbox/state-management/internals": [
-				"libs/state-management/internals/src/index.ts"
+			"@anti-toolbox/state-management/internal": [
+				"libs/state-management/internal/src/index.ts"
 			]
 		}
 	},

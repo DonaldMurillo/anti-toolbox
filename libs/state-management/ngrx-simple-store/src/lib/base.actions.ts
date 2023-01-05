@@ -1,4 +1,4 @@
-import { BaseSimpleState, SafeType, TypeSafeCallBack } from "@anti-toolbox/state-management/interfaces";
+import type { BaseSimpleState, SafeType, TypeSafeCallBack } from "@anti-toolbox/state-management/interfaces";
 import { ActionCreator, createAction, props } from "@ngrx/store";
 
 export function BaseSimpleActions<T extends SafeType<BaseSimpleState>, E extends { [key: string]: ActionCreator<any> } | undefined>(featureName: string, extendedActions?: E) {
