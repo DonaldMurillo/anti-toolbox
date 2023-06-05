@@ -1,0 +1,43 @@
+{
+	"name": "facade-service",
+	"$schema": "../../node_modules/nx/schemas/project-schema.json",
+	"projectType": "library",
+	"sourceRoot": "libs/facade-service/src",
+	"prefix": "anti-toolbox",
+	"targets": {
+		"build": {
+			"executor": "@nrwl/angular:package",
+			"outputs": ["dist/libs/facade-service"],
+			"options": {
+				"project": "libs/facade-service/ng-package.json"
+			},
+			"configurations": {
+				"production": {
+					"tsConfig": "libs/facade-service/tsconfig.lib.prod.json"
+				},
+				"development": {
+					"tsConfig": "libs/facade-service/tsconfig.lib.json"
+				}
+			},
+			"defaultConfiguration": "production"
+		},
+		"test": {
+			"executor": "@nrwl/jest:jest",
+			"outputs": ["coverage/libs/facade-service"],
+			"options": {
+				"jestConfig": "libs/facade-service/jest.config.ts",
+				"passWithNoTests": true
+			}
+		},
+		"lint": {
+			"executor": "@nrwl/linter:eslint",
+			"options": {
+				"lintFilePatterns": [
+					"libs/facade-service/**/*.ts",
+					"libs/facade-service/**/*.html"
+				]
+			}
+		}
+	},
+	"tags": []
+}

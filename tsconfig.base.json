@@ -15,6 +15,7 @@
 		"skipDefaultLibCheck": true,
 		"baseUrl": ".",
 		"paths": {
+			"@anti-toolbox/facade-service": ["libs/facade-service/src/index.ts"],
 			"@anti-toolbox/realy-fun-ctions": [
 				"libs/really-fun-ctions/src/index.ts"
 			]

@@ -1,0 +1,19 @@
+{
+	"name": "@anti-toolbox/facade-service",
+	"version": "0.0.1",
+	"author": {
+		"name": "Donald Murillo",
+		"email": "donald.murillo07@gmail.com",
+		"url": "https://github.com/DonaldMurillo"
+	},
+	"license": "MIT",
+	"peerDependencies": {
+		"@angular/common": "^14.2.0",
+		"@angular/core": "^14.2.0",
+		"@ngrx/entity": "^14.3.2",
+		"@ngrx/store": "^14.3.2"
+	},
+	"dependencies": {
+		"tslib": "^2.3.0"
+	}
+}
